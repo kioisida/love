@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Люблю</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black; /* Черный фон */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Press Start 2P', cursive; /* Пиксельный шрифт */
+            color: white; /* Белый цвет текста */
+            font-size: 5em; /* Уменьшенный размер шрифта */
+            text-align: center;
+            white-space: nowrap; /* Запрет переноса текста */
+            padding: 0 10%; /* Отступы по бокам */
+        }
+        #loveText {
+            opacity: 0; /* Изначально текст невидим */
+            transition: opacity 0.1s; /* Плавный переход для эффекта появления */
+        }
+    </style>
+</head>
+<body>
+    <div id="loveText">Люблю</div>
+    <script>
+        function showLove() {
+            const loveText = document.getElementById('loveText');
+            loveText.style.opacity = 1; // Делаем текст видимым
+            setTimeout(() => {
+                loveText.style.opacity = 0; // Прячем текст через короткий промежуток времени
+            }, 100); // 100 мс
+        }
+
+        setInterval(showLove, 150); // Появление текста каждые 150 мс
+    </script>
+</body>
+</html>
